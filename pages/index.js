@@ -4,9 +4,8 @@ import { MainLayout } from "./components/MainLayout";
 
 export default function Index() {
   return (
-    <MainLayout>
+    <MainLayout title='Home'>
     <Head>
-        <title>Next</title>
         <meta name="keywords" content="next, javascript, react" />
         <meta name="description" content="next tutorial" /> 
         <meta charSet="utf-8" />
