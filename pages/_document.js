@@ -4,7 +4,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+            <link href="https: //fonts.googleapis.com/css2?family= Roboto:ital, wght @1,300 & display=swap" rel="stylesheet"/>
+        </Head>
         <body>
           <Main />
           <NextScript />
