@@ -1,4 +1,5 @@
 import  Router  from "next/router"
+import Head from "next/head"
 
 export default function About(){
 
@@ -7,6 +8,9 @@ export default function About(){
     }
     return(
         <>
+            <Head>
+                <title>About</title>
+            </Head>
             <h1>About Page</h1>
 
             <button onClick={linkClickHandler}>Go back to home </button>
