@@ -1,5 +1,6 @@
 import  Router  from "next/router"
 import Head from "next/head"
+import { MainLayout } from "../components/MainLayout"
 
 export default function About(){
 
@@ -7,7 +8,7 @@ export default function About(){
         Router.push('/')
     }
     return(
-        <>
+        <MainLayout>
             <Head>
                 <title>About</title>
             </Head>
@@ -15,7 +16,7 @@ export default function About(){
 
             <button onClick={linkClickHandler}>Go back to home </button>
             <button onClick={()=>Router.push('/posts')}>Go  to posts inline </button>
-        </>
+        </MainLayout>
         
     )
 }
