@@ -7,6 +7,8 @@ export default function Index() {
     <Head>
         <title>Next</title>
         <meta name="keywords" content="next, javascript, react" />
+        <meta name="description" content="next tutorial" /> 
+        <meta charSet="utf-8" />
     </Head>
       <h1>Hello next.js</h1>
       <p><Link href={'/about'} ><a>About</a></Link></p>
