@@ -1,11 +1,14 @@
 import Link from "next/dist/client/link"
 import Head from "next/dist/shared/lib/head"
 
-export function MainLayout({children, title:string='Next App'}){
+export function MainLayout({children, title}){
     return(
         <>
             <Head>
-                {title}
+                <title>{title}</title>
+                <meta name="keywords" content="next, javascript, react" />
+                <meta name="description" content="next tutorial" /> 
+                <meta charSet="utf-8" />
             </Head>
             <nav>
                <Link href={'/'}><a>Home</a></Link>

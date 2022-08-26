@@ -1,5 +1,4 @@
 import  Router  from "next/router"
-import Head from "next/head"
 import { MainLayout } from "../components/MainLayout"
 
 export default function About(){
@@ -8,10 +7,7 @@ export default function About(){
         Router.push('/')
     }
     return(
-        <MainLayout>
-            <Head>
-                <title>About</title>
-            </Head>
+        <MainLayout title='About'>
             <h1>About Page</h1>
 
             <button onClick={linkClickHandler}>Go back to home </button>

@@ -1,12 +1,11 @@
-import Head from "next/head"
+import { MainLayout } from "../components/MainLayout"
 
 export default function Author(){
     return(
         <>
-            <Head>
-                <title>Author</title>
-            </Head>
-            <h1>Author Page</h1>
+           <MainLayout title='Author'>
+                <h1>Author Page</h1>
+            </MainLayout>
         </>
     )
 }
