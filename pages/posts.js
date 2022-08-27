@@ -18,6 +18,7 @@ export default function Posts(){
     return (
     <MainLayout title='Post'>
         <h1>Posts Page</h1>
+        <pre>{JSON.stringify(post, null, 2)}</pre>
     </MainLayout>
        
     )
