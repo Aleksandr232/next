@@ -1,0 +1,10 @@
+
+{
+        "posts": [
+          { "id": 1, "title": "пост", "author": "typicode" },
+          { "id": 2, "title": "пост2", "author": "typicode" },
+          { "id": 3, "title": "пост3", "author": "typicode" },
+          { "id": 4, "title": "пост4", "author": "typicode2" }
+        ]
+       
+}
