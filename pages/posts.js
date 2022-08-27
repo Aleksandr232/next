@@ -4,8 +4,8 @@ import Link from "next/link"
 
 
 
-export default function Posts({posts}){
-   /*  const [post, setPost]=useState([])
+export default function Posts({posts: serverPosts}){
+    const [posts, setPost]=useState(serverPosts)
 
     useEffect(()=>{
         async function load(){
@@ -13,8 +13,16 @@ export default function Posts({posts}){
             const json = await response.json()
             setPost(json)
         }
-        load()
-    },[]) */
+        if(!serverPosts){
+            load()
+        }
+    },[])
+
+    if (!posts){
+        return <MainLayout>
+            <p>Loading...</p>
+        </MainLayout>
+    }
 
     return (
     <MainLayout title='Post'>
@@ -33,7 +41,11 @@ export default function Posts({posts}){
 }
 
 
-Posts.getInitialProps = async() =>{
+Posts.getInitialProps = async({req}) =>{
+    if(!req){
+        return {posts: null}
+    }
+
     const response = await fetch('http://localhost:4200/posts')
     const posts = await response.json()
 
